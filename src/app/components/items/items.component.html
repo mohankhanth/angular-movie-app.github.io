@@ -1,0 +1,10 @@
+
+  <div class="card" *ngIf="movieItems">
+    <a  [routerLink]="'/movie/'+movieItems.id">
+      <div class="star">
+        <p><i class="fa fa-star" aria-hidden="true"></i> {{ movieItems.vote_average }} / 10</p>
+      </div>
+      <img src="{{imageSize.samll}}{{movieItems.poster_path}}" class="card-img-top" alt="...">
+    </a>
+  </div>
+

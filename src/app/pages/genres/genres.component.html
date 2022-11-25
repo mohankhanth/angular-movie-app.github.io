@@ -1,0 +1,12 @@
+
+<div style="margin: 15px 0px 10px;">
+    <app-banner-items [poupulMovies]="generalMovie" [headingTitle]="movieCategory"></app-banner-items>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-12">
+            <pagination [totalItems]="totalItems" (pageChanged)="setPage($event)"></pagination>
+        </div>
+    </div>
+</div>

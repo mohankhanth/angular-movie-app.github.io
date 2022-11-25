@@ -1,0 +1,28 @@
+.card {
+    width: 100%;
+    position: relative;
+    background: #000;
+    border: 1px solid #c5d70d;
+    border-radius: 0px;
+}
+.card .star {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(0,0,0,0.7);
+    padding: 5px 15px 7px;
+}
+.card .star p {
+    color: #fff;
+    font-size: 16px;
+    margin: 0px;
+    padding: 0px;
+}
+.card .star p .fa-star {
+ color: #fce300;
+ padding-right: 5px;
+}
+.card img {
+    width: 100%;
+    height: 100%;
+}

@@ -1,0 +1,110 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+
+
+/* Importing Bootstrap SCSS file. */
+@import "~bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+@import '~ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import '~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+
+body {
+    background: #000;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+img, svg {
+    max-width: 100%;
+    height: auto;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    display: none;
+}
+
+.pagination {
+    justify-content: center;
+}
+
+.nav-tabs {
+    border: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+}
+.nav-tabs .nav-link {
+    border: 0px;
+    color: #ffffff;
+}
+.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+    border: 0px;
+    color: #fce300;
+    background: #1e1e1e;
+    border-bottom: 1px solid #fce300;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 10px 10px 25px 10px;
+    grid-gap: 15px;
+
+    & img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+      }
+  }
+
+.modal.show .modal-dialog {
+    transform: none;
+    max-width: 80%;
+    height: auto;
+}
+
+.charcter-slide .carousel-control-prev, .charcter-slide .carousel-control-next {
+    display: none;
+}
+
+.charcter-slide .carousel-indicators {
+    bottom: -48px;
+}
+
+.charcter-slide .carousel-item .item img {
+    border: 1px solid #fce300;
+    margin: 5px;
+    max-width: 97%;
+}
+
+.navbar .show > .btn-primary.dropdown-toggle {
+    color: rgb(124, 15, 15);
+    background-color: #fce300;
+    border-color: #fce300;
+}
+
+.page-item.disabled .page-link {
+    background: rgba(0,0,0,0.5);
+    color: #fce300;
+    border-color: #fce300;
+}
+.page-item.active .page-link {
+    color: #000;
+    background-color: #fce300;
+    border-color: #fce300;
+}
+.page-link {
+    background-color: inherit;
+    color: #fce300;
+    border: 0px;
+}
+.page-link:hover {
+    color: #000;
+    background-color: #fce300;
+    border-color: #fce300;
+}
+

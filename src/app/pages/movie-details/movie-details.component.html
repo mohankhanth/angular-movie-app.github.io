@@ -1,0 +1,111 @@
+<ng-container *ngIf="movies">
+    <app-slider [inmovie]="[movies]" [isIndicator]="true"></app-slider>
+</ng-container>
+
+<!-- <pre>{{movies | json}}</pre> -->
+
+<ng-container *ngIf="movies">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+            <div>
+                <tabset>
+
+                  <tab heading="Overview" id="tab1">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <img [src]="imageSizes.medium + movies.poster_path" [alt]="movies.title">
+                        </div>
+                        <div class="col-sm-9">
+                            <h2>Overview</h2>
+                            <p>{{movies.overview}}</p>
+
+                            <div class="start">
+                                <div class="labels">Release date :</div>
+                                <div class="details">{{movies.release_date | date: 'dd.MM.yyyy' }}</div>
+                            </div>
+                            <div class="start">
+                                <div class="labels">language :</div>
+                                <div class="details">{{movies.original_language | uppercase}}</div>
+                            </div>
+                            <div class="start">
+                                <div class="labels">Revenue :</div>
+                                <div class="details">{{movies.revenue | currency}}</div>
+                            </div>
+                            <div class="start">
+                                <div class="labels">Duration :</div>
+                                <div class="details">{{movies.runtime}} min</div>
+                            </div>
+                            <div class="start">
+                                <div class="labels">Status :</div>
+                                <div class="details">{{movies.status}}</div>
+                            </div>
+                            <div class="start">
+                                <div class="labels">Genres :</div>
+                                <div class="details">
+                                    <span *ngFor="let gen of movies.genres">
+                                        {{gen.name}}
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  </tab>
+
+                  <tab heading="Videos">
+                    <!-- <pre>{{moviesVideo | json}}</pre> -->
+                    <ng-container *ngFor="let movies of moviesVideo">
+                        <video-embed [key]="movies.key"  [site]="movies.site"></video-embed>
+                    </ng-container>
+                    
+                  </tab>
+                  <tab heading="Photos">
+                    <div class="grid-container">
+                        <ng-container *ngFor="let images of moviesImages">
+                            
+                            <video-images [videoImages]="images.file_path"></video-images>
+                        </ng-container>
+                    </div>
+                  </tab>
+                </tabset>
+              </div>
+        </div>
+    </div>
+    <!-- <pre>{{moviesCharacters | json}}</pre> -->
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="artisthead">
+                <h2>Artist</h2>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="charcter-slide">
+                <carousel [itemsPerSlide]="itemsPerSlide"
+                [singleSlideOffset]="singleSlideOffset"
+                [startFromIndex]="6"
+                [interval]="0">
+                    <slide *ngFor="let actor of moviesCharacters; let index=index">
+    
+                        <ng-container *ngIf="actor.profile_path != null">
+                            <img [src]="imageSizes.large+actor.profile_path" alt="image slide" style="display: block; width: 100%;">
+                        
+                        
+                        <div class="charcter-name">
+                        <h2>{{actor.name}}</h2>
+                        </div>
+                    </ng-container>
+                    </slide>
+                </carousel>
+            </div>
+        </div>
+    </div>
+</div>
+</ng-container>
+
+<app-banner-items [poupulMovies]="moviesSimilar" headingTitle="Similar Movie"></app-banner-items>
+
+
+
+

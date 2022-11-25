@@ -1,0 +1,15 @@
+<!-- <img src="{{imageSizes.large}}{{images.file_path}}" alt=""> -->
+
+  <img (click)="openModal(template)" [src]="imageSizes.large+videoImages" alt="">
+
+
+ 
+  <ng-template #template>
+    <div class="modal-body">
+        <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef?.hide()">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        <img [src]="imageSizes.large+videoImages" alt="">
+    </div>
+  </ng-template>
+

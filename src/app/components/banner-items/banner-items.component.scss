@@ -1,0 +1,19 @@
+.headtitle {
+    width: 100%;
+    float: left;
+    padding: 0px 0px 10px 20px;
+}
+.headtitle h2 {
+    margin: 0px;
+    padding: 0px;
+    font-size: 25px;
+    text-transform: capitalize;
+    color: #fce300;
+}
+.wrapgrid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    width: 100%;
+    grid-gap: 30px 30px;
+    padding: 0px 20px 30px;
+}

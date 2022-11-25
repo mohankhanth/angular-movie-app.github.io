@@ -1,0 +1,59 @@
+slide {
+    width: 100%;
+    height: 92vh;
+    position: relative;
+    overflow: hidden;
+
+    & img {
+        height: 100vh;
+    }
+
+    & .aboveimage {
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        z-index: 99999;
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+73,000000+73&1+21,0+100 */
+background: -moz-linear-gradient(left,  rgba(0,0,0,1) 21%, rgba(0,0,0,0.34) 73%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left,  rgba(0,0,0,1) 21%,rgba(0,0,0,0.34) 73%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right,  rgba(0,0,0,1) 21%,rgba(0,0,0,0.34) 73%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
+padding: 0px 0px 0px 100px;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+justify-content: center;
+
+        & h2 {
+            font-size: 41px;
+            padding: 0px 0px 20px;
+        }
+
+        & ul {
+            margin: 0px 0px 20px;
+            padding: 0px;
+            display: block;
+
+           & li {
+                list-style: none;
+                display: inline-block;
+                padding: 0px 10px;
+                font-size: 20px;
+
+                .fa-star {
+                    color: #fce300;
+                    padding-right: 5px;
+                }
+            }
+            & li:nth-child(1) {
+                padding: 0px 10px 0px 0px;
+            }
+        }
+        & p {
+            font-size: 20px;
+            width: 45%;
+        }
+    }
+}

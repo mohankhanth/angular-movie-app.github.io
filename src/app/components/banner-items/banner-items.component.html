@@ -1,0 +1,19 @@
+<!-- <pre>{{poupulMovies | json}}</pre> -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="headtitle">
+                <h2>{{ headingTitle }}</h2>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="wrapgrid">
+                <ng-container *ngFor="let movies of poupulMovies">
+                    <app-items [movieItems]="movies"></app-items>
+                </ng-container>
+            </div>
+        </div>
+    </div>
+</div>

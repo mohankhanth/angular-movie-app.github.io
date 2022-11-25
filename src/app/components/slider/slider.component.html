@@ -1,0 +1,28 @@
+<!-- <img src="https://image.tmdb.org/t/p/original/egoyMDLqCxzjnSrWOz50uLlJWmD.jpg" alt="image"> -->
+<!-- <div class="slider01"></div> -->
+  <carousel [showIndicators]="showIndicator" [isAnimated]="true"
+  [interval]="myInterval" [(activeSlide)]="activeSlideIndex">
+    <slide *ngFor="let movie of inmovie">
+      <img src="https://image.tmdb.org/t/p/original/{{movie.backdrop_path}}" alt="first slide" style="display: block; width: 100%;">
+      <div class="aboveimage">
+          <h2>{{movie.title}}</h2>
+          <ul>
+              <li><i class="fa fa-star" aria-hidden="true"></i> {{movie.vote_average}}</li>
+              <li>|</li>
+              <li>{{movie.vote_count}} Reviews</li>
+              <li>|</li>
+              <li>{{movie.release_date | date:'yyyy'}}</li>
+          </ul>
+          <p>{{movie.overview}}</p>
+      </div>
+    </slide>
+    <!-- <slide>
+      <img src="https://image.tmdb.org/t/p/original/AdyJH8kDm8xT8IKTlgpEC15ny4u.jpg" alt="second slide" style="display: block; width: 100%;">
+    </slide>
+    <slide>
+      <img src="https://image.tmdb.org/t/p/original/egoyMDLqCxzjnSrWOz50uLlJWmD.jpg" alt="third slide" style="display: block; width: 100%;">
+    </slide>
+    <slide>
+        <img src="https://image.tmdb.org/t/p/original/egoyMDLqCxzjnSrWOz50uLlJWmD.jpg" alt="third slide" style="display: block; width: 100%;">
+      </slide> -->
+  </carousel>

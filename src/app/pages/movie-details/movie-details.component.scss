@@ -1,0 +1,32 @@
+.start {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.start .labels {
+    color: #fff;
+    padding-right: 10px;
+}
+.start .details {
+    color: #fce300;
+}
+.charcter-slide {
+    width: 100%;
+    padding: 0px 10px 50px 10px;
+}
+.charcter-name h2 {
+    font-size: 1rem;
+    text-align: center;
+    color: #fce300;
+}
+.artisthead {
+    width: 100%;
+    float: left;
+}
+.artisthead h2 {
+    font-size: 25px;
+    text-align: center;
+    color: #fce300;
+    font-weight: bold;
+    letter-spacing: 2px;
+}

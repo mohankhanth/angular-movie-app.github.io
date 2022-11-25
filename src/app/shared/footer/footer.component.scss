@@ -1,0 +1,9 @@
+footer {
+    width: 100%;
+    float: left;
+    background: rgb(48, 45, 45);
+
+    & p {
+        color: #fff;
+    }
+}

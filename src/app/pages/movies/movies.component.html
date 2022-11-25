@@ -1,0 +1,10 @@
+<app-slider [inmovie]="banners"></app-slider>
+<app-banner-items [poupulMovies]="getPopular" headingTitle="Popular Movie"></app-banner-items>
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-12">
+            <pagination [totalItems]="totalItems" (pageChanged)="setPage($event)"></pagination>
+        </div>
+    </div>
+</div>
